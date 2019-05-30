@@ -1,13 +1,21 @@
 public class Player {
 
-	int 	maxHP, HP, damage;
-	double	defense;
+	public int 	maxHP, HP, damage, x, y;
+	public double	defense;
+
+	public void move(World wld,byte dir) {
+		if (wld.map.grid.Map[x][y].canGoToDirections & dir != 0) {
+			
+		}
+	}
 
 	public Player () {
-		defense = 0.0;
-		maxHP = 100;
-		HP = 100;
-		damage = 15;
+		x			= 0;
+		y			= 1;
+		defense		= 0.0;
+		maxHP		= 100;
+		HP			= 100;
+		damage		= 15;
 	}
 
 }
