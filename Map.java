@@ -13,7 +13,7 @@ public class Map
 		rooms[2][1] = "";
 		rooms[2][2] = "";
 
-		byte[][] moveGrid = new byte[3][3];
+		int [][] moveGrid = new int[3][3];
 		moveGrid[0][0] = 0b00000100; // set to 0b00000110 after riddle
 		moveGrid[0][1] = 0b00000101;
 		moveGrid[0][2] = 0b00000011;
