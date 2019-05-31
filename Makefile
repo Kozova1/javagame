@@ -1,7 +1,8 @@
-build: *.java
+game: *.java
 	javac *.java
-
+.PHONY: clean
 clean:
 	rm *.class
-run:
+.PHONY: run
+run: 
 	java Main

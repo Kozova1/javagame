@@ -10,8 +10,9 @@ public abstract class Enemy {
 		}
 	}
 
-	public void attack(World wld) {
-		wld.player.HP -= damage * (1 - wld.player.defense);
+	public int attack(World wld) {
+		wld.player.HP -= (int)(damage * (1 - wld.player.defense));
+		return (int)(damage * (1 - wld.player.defense));
 	}
 
 	public Enemy() {
