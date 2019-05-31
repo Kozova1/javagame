@@ -10,10 +10,15 @@ public class GridSquare
 	 * */
 	public int canGoToDirections;
 
-	public String contains;
+	public String description;
 
-	public GridSquare(int canGoTo, String contents) {
+	public GridSquare(int canGoTo, String desc) {
 		canGoToDirections = canGoTo;
-		contains = contents;
+		description = desc;
+	}
+
+	public void describe() {
+		System.out.println(description);
+		System.out.println();
 	}
 }
