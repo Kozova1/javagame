@@ -10,6 +10,31 @@ public class Main {
 		return input;
 	}
 
+	public static void handleInput(World wld, String input) {
+		switch (input) {
+			case "go n":
+				wld.player.move(wld, 0x08);
+				break;
+			case "go e":
+				wld.player.move(wld, 0x04);
+				break;
+			case "go s":
+				wld.player.move(wld, 0x02);
+				break;
+			case "go w":
+				wld.player.move(wld, 0x01);
+				break;
+
+			case "attack":
+				switch (wld.player.x) {
+					case 2:
+						wld.player.attack(wld.Troll);
+						break;
+				}
+				break;
+		}
+	}
+
 	public static void printb(byte toPrint) {
 		System.out.println(Integer.toBinaryString(toPrint));
 	}

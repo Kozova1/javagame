@@ -28,6 +28,13 @@ public class Player {
 		}
 	}
 
+	public void attack(Enemy en) {
+		en.HP -= (1 - en.defense) * damage;
+		if (en.HP <= 0) {
+			en = null;
+		}
+	}
+
 	public Player () {
 		x			= 0;
 		y			= 1;
