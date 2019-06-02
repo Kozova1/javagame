@@ -37,6 +37,12 @@ public class Main {
 							System.out.println("You attacked the goblin for " + wld.player.attack(wld.Goblin) + " points of damage");
 						}
 						break;
+					case 1:
+						if (wld.player.y == 2 && wld.Dragon.HP > 0) {
+							System.out.println("You attacked the dragon for " + wld.player.attack(wld.Dragon) + " points of damage");
+						}
+						break;
+
 					default:
 						System.out.println("There's nothing to attack here!");
 						break;
@@ -84,12 +90,16 @@ public class Main {
 				System.out.println("The troll attacked you for " + world.Troll.attack(world) + " points of damage");
 			} else if ((world.player.y == 1) && (world.player.x == 0) && world.Goblin.HP > 0) {
 				System.out.println("The goblin attacked you for " + world.Goblin.attack(world) + " points of damage");
+			} else if ((world.player.y == 2) && (world.player.x == 1) && world.Dragon.HP > 0) {
+				System.out.println("The dragon attacked you for " + world.Dragon.attack(world) + " points of damage");
 			}
 
 			if (world.Troll.HP > 0)
 				world.Troll.regen();
 			if (world.Goblin.HP > 0)
 				world.Goblin.regen();
+			if (world.Dragon.HP > 0)
+				world.Dragon.regen();
 
 			System.out.println("What do you do?");
 			System.out.print(" > ");
